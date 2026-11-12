@@ -1,0 +1,91 @@
+/* ============================================
+   Mochi's Pet Care — Stage 1: Functional Styles
+   ============================================
+   Minimal layout and visibility rules only.
+   No themes, animations, or decorative styling.
+   ============================================ */
+
+/* ── Visibility toggle ─────────────────────── */
+.hidden {
+    display: none !important;
+}
+
+/* ── Page layout ───────────────────────────── */
+body {
+    font-family: sans-serif;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* ── Stats panel ───────────────────────────── */
+#stats-panel {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.stat-row label {
+    width: 130px;
+    flex-shrink: 0;
+}
+
+.stat-row progress {
+    flex: 1;
+    height: 20px;
+}
+
+.stat-row span {
+    width: 60px;
+    text-align: right;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ── Timer ─────────────────────────────────── */
+#timer {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+/* ── Buttons ───────────────────────────────── */
+#actions,
+#controls {
+    margin: 15px 0;
+}
+
+#actions button,
+#controls button,
+#start-screen button,
+#game-over-screen button {
+    font-size: 1em;
+    padding: 8px 16px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* ── Game over ─────────────────────────────── */
+#game-over-screen {
+    margin-top: 20px;
+}
+
+#game-over-message {
+    font-size: 1.2em;
+    font-weight: bold;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochi's Pet Care</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>&#x1F43E; Mochi's Pet Care</h1>
+
+    <!-- IDLE screen -->
+    <div id="start-screen">
+        <p>Welcome! Take care of your pet Mochi.</p>
+        <p>Keep hunger, happiness, and energy above zero to survive!</p>
+        <button id="btn-start">&#x1F7E2; Start</button>
+    </div>
+
+    <!-- RUNNING / PAUSED screen -->
+    <div id="game-screen" class="hidden">
+        <div id="stats-panel">
+            <div class="stat-row">
+                <label>&#x1F356; Hunger:</label>
+                <progress id="hunger-bar" max="100" value="50"></progress>
+                <span id="hunger-value">50/100</span>
+            </div>
+            <div class="stat-row">
+                <label>&#x1F60A; Happiness:</label>
+                <progress id="happiness-bar" max="100" value="50"></progress>
+                <span id="happiness-value">50/100</span>
+            </div>
+            <div class="stat-row">
+                <label>&#x26A1; Energy:</label>
+                <progress id="energy-bar" max="100" value="50"></progress>
+                <span id="energy-value">50/100</span>
+            </div>
+        </div>
+
+        <div id="timer">&#x23F1; <span id="timer-display">00:00</span></div>
+
+        <div id="actions">
+            <button id="btn-feed">&#x1F356; Feed</button>
+            <button id="btn-play">&#x1F3BE; Play</button>
+            <button id="btn-sleep">&#x1F4A4; Sleep</button>
+        </div>
+
+        <div id="controls">
+            <button id="btn-pause">&#x23F8; Pause</button>
+            <button id="btn-resume" class="hidden">&#x25B6; Resume</button>
+            <button id="btn-restart">&#x1F504; Restart</button>
+        </div>
+    </div>
+
+    <!-- GAME_OVER screen -->
+    <div id="game-over-screen" class="hidden">
+        <p id="game-over-message"></p>
+        <button id="btn-restart-gameover">&#x1F504; Restart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
